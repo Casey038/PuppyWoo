@@ -6,11 +6,8 @@ function setup() {
     createCanvas(640, 480);
     pig = new Piggy();
     
-<<<<<<< HEAD
-    for(var i = numFood; i > 0; i--){
-=======
+
     for(var i = 0; i < numFood; i++){
->>>>>>> 76b69419851351c7a0e79777e78455d5b0dd238b
         feed.push(new Food(random(width), random(height)));
     }
 }
@@ -19,11 +16,7 @@ function draw() {
     background('FFFAED')
     pig.display();
     
-<<<<<<< HEAD
     for(var i = 0; i < feed.length; i++){
-=======
-    for(var i = 0; i < numFood; i++){
->>>>>>> 76b69419851351c7a0e79777e78455d5b0dd238b
         feed[i].display();
     }
 }
@@ -31,7 +24,6 @@ function draw() {
 
 function mousePressed() {
     pig.eat();
-<<<<<<< HEAD
 }
 
 function Food(x, y) {
@@ -49,6 +41,7 @@ function Food(x, y) {
 function Piggy() {
     var x = mouseX;
     var y = mouseY;
+    var diameter = 200;
 
     this.getDistance = function(other){
         var dist = Math.sqrt(Math.pow(x - other.x,2) + Math.pow(y - other.y, 2)); 
@@ -61,7 +54,7 @@ function Piggy() {
             var food = feed[i];
             var d = this.getDistance(food);
             var r1 = food.foodSize/2;
-            var r2 = 100; // check this
+            var r2 = diameter/2; // check this
             if(r1 + r2 > d) {
                 feed.splice(i,1);
             }
@@ -133,8 +126,6 @@ function Piggy() {
         ellipse(x-42, y-26, 10, 20);
     }
     
-=======
->>>>>>> 76b69419851351c7a0e79777e78455d5b0dd238b
 }
 
 function Food(x, y) {
@@ -148,7 +139,7 @@ function Food(x, y) {
         ellipse(this.x, this.y, this.foodSize, this.foodSize);
     }
 }
-
+/*
 function Piggy() {
     var x = mouseX;
     var y = mouseY;
@@ -171,7 +162,6 @@ function Piggy() {
             }
         }
     }
-    asdf
     
     this.display = function() {
         x = mouseX;
@@ -239,3 +229,4 @@ function Piggy() {
     }
     
 }
+*/
