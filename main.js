@@ -36,15 +36,15 @@ function draw() {
 
 function mousePressed() {
     pig.eat();
-    headSize += 10;
-    earXR += 3.5;
-    earYR += 3.5;
-    earXL += 3.5;
-    earYL += 3.5;
-    ear2XR += 3.5;
-    ear2YR += 3.5;
-    ear2XL += 3.5;
-    ear2YL += 3.5;
+    //headSize += 10;
+    //earXR += 3.5;
+    //earYR += 3.5;
+    //earXL += 3.5;
+    //earYL += 3.5;
+    //ear2XR += 3.5;
+    //ear2YR += 3.5;
+    //ear2XL += 3.5;
+    //ear2YL += 3.5;
 }
 /*
 function mouseIsPressed() {
@@ -73,9 +73,11 @@ function Piggy() {
         return dist;
     }
     
+    /*
     this.eyes = function() {
         eyesBig = !eyesBig;
     }
+    */
     
     this.eat = function() {
         console.log('try to eat');
@@ -89,11 +91,23 @@ function Piggy() {
                 feed.push(new Food(random(width), random(height)));
             }
         }
+        if(feed.splice(i, 1)) {
+           headSize += 10;
+            earXR += 3.5;
+            earYR += 3.5;
+            earXL += 3.5;
+            earYL += 3.5;
+            ear2XR += 3.5;
+            ear2YR += 3.5;
+            ear2XL += 3.5;
+            ear2YL += 3.5;
+           }
     }
     
     this.display = function() {
         x = mouseX;
         y = mouseY;
+        
         /*
         //earRight
         fill('rgb(255, 100, 225)');
