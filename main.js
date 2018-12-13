@@ -89,10 +89,7 @@ function Piggy() {
             if(r1 + r2 > d) {
                 feed.splice(i,1);
                 feed.push(new Food(random(width), random(height)));
-            }
-        }
-        if(feed.splice(i, 1)) {
-           headSize += 10;
+                headSize += 10;
             earXR += 3.5;
             earYR += 3.5;
             earXL += 3.5;
@@ -101,7 +98,9 @@ function Piggy() {
             ear2YR += 3.5;
             ear2XL += 3.5;
             ear2YL += 3.5;
-           }
+            }
+        }
+           
     }
     
     this.display = function() {
