@@ -4,6 +4,8 @@
 
 //Hey Mr. Clark
 //How's the night going
+//README
+//SYNTAX!!!
 
 https://daringfireball.net/projects/markdown/syntax
 
