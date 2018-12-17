@@ -12,6 +12,7 @@
 //markdown syntax
 //APCSPSCPSCPSCPSPCSPC
 //horse
+//man
 
 
 https://daringfireball.net/projects/markdown/syntax
